@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
-// import { NgForm } from '@angular/forms'
 import { FormControl, FormGroup, Validators } from "@angular/forms";
+import { NgForm } from "@angular/forms"; 
 import { Hero }    from './hero';
 @Component({
   selector: 'hero-form',
@@ -17,8 +17,8 @@ export class HeroFormComponent {
   this.model = new Hero(42, '', '');
 }
 
-heroForm;
-@ViewChild('heroForm') currentForm;
+heroForm: NgForm;
+@ViewChild('heroForm') currentForm: NgForm;
 
 ngAfterViewChecked() {
   this.formChanged();
@@ -54,7 +54,7 @@ onValueChanged(data?: any) {
 }
 
 formErrors = {//当英雄数据有效时，这些消息的值为空字符串。
-  'name': '',
+  'name': '',//这里的name是name=的那个结果
   'power': ''
 };
 

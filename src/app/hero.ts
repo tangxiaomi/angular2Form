@@ -6,3 +6,6 @@ export class Hero {
     public alterEgo?: string
   ) {  }
 }
+export class ConfigurationForm {
+  authenticationUrl: string = "";
+}

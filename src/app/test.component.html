@@ -1,0 +1,12 @@
+ <form [formGroup]="applyForm" (ngSubmit)="onSubmit()" >
+    <div class="form-group" [class.has-success]="authUrlControl.valid" [class.has-danger]="formErrors.authUrl">
+        <label for="authUrl">Authentication Url</label>
+        <input type="text" class="form-control" required
+               formControlName="authUrl" name="authUrl">
+         <div class="form-control-feedback">
+            {{formErrors.authUrl}}
+          </div>
+      </div>
+        <input type="submit" class="btn btn-primary btn-block btn-sm" value="save">
+  </form>
+    
